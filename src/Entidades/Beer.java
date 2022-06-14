@@ -11,6 +11,7 @@ public class Beer {
         this.name=name;
         this.abv=abv;
         this.style=style;
+        // Hay que agregar la lista de Reviews (elgir TAD)
 
     }
 

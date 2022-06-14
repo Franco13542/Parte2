@@ -3,6 +3,7 @@ package Entidades;
 public class Brewery {
     private long id;
     private String name;
+    //hay que agregar la lista de cervezas (elegir TAD)
 
     public Brewery(long id, String name){
         this.id=id;
