@@ -1,5 +1,8 @@
 package Entidades;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -26,12 +29,12 @@ public class Main {
                         int opcion2 = 0;
                         while (opcion != 6) {
                             try {
-                                System.out.println("\nIngrese una opcion entre 1-3: ");
+                                System.out.println("\nIngrese una opcion entre 1-6: ");
                                 System.out.println("1 - Cervezas con mas reseñas");
                                 System.out.println("2 - Catadores con mas reseñas");
-                                System.out.println("3 - Cantidad de reviews");
+                                System.out.println("3 - Cantidad de reseñas");
                                 System.out.println("4 - Cervezas con mejor aroma");
-                                System.out.println("5 - Cervezas con mas reviews");
+                                System.out.println("5 - Cervezas con mas reseñas");
                                 System.out.println("6 - Salir");
                                 opcion = in.nextInt();
                                 in.nextLine();
@@ -43,7 +46,33 @@ public class Main {
                                         //masReseñasCatadores(sistema2);
                                         break;
                                     case 3:
-                                        //cantidadDeReviews(sistema2);
+
+                                        Control a = new Control();
+                                        System.out.println("Ingrese la fecha de inicio:");
+                                        Scanner in3 = new Scanner(System.in);
+                                        String fechaIni = in3.nextLine();
+                                        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+                                        Date fecha = null;
+                                        try {
+                                            fecha = sdf.parse(fechaIni);
+                                        } catch (ParseException e) {
+
+                                        }
+
+                                        System.out.println("Ingrese la fecha de finalizacion:");
+                                        Scanner in4 = new Scanner(System.in);
+                                        String fechaF = in4.nextLine();
+                                        SimpleDateFormat sdf2 = new SimpleDateFormat("dd/MM/yyyy");
+                                        Date fecha2 = null;
+                                        try {
+                                            fecha2 = sdf2.parse(fechaF);
+                                        } catch (ParseException e) {
+
+                                        }
+
+                                        int cantReviews = a.cantidadDeReviews(fecha, fecha2);
+                                        System.out.println("La cantidad de reviews entre "+fecha+"y "+fecha2+"es "+cantReviews);
+
                                         break;
                                     case 4:
                                         //mejorAroma(sistema2);
@@ -77,6 +106,9 @@ public class Main {
         }
 
     }
+
+
+
 
 }
 

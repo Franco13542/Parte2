@@ -5,13 +5,13 @@ public class Beer {
     private String name;
     private double abv;
     private Style style;
+    private MyList<Review> listaReviewsCerveza = new MyListImpl<>();
 
     public Beer(long id, String name, double abv, Style style){
         this.id=id;
         this.name=name;
         this.abv=abv;
         this.style=style;
-        // Hay que agregar la lista de Reviews (elgir TAD)
 
     }
 
@@ -46,4 +46,13 @@ public class Beer {
     public void setStyle(Style style) {
         this.style = style;
     }
+
+    public MyList<Review> getListaReviews() {
+        return listaReviews;
+    }
+
+    public void setListaReviews(MyList<Review> listaReviews) {
+        this.listaReviews = listaReviews;
+    }
 }
+

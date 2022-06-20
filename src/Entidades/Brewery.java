@@ -3,7 +3,7 @@ package Entidades;
 public class Brewery {
     private long id;
     private String name;
-    //hay que agregar la lista de cervezas (elegir TAD)
+    private MyList<Beer> listaBeers = new MyListImpl<>();
 
     public Brewery(long id, String name){
         this.id=id;
@@ -24,5 +24,13 @@ public class Brewery {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public MyList<Beer> getListaBeers() {
+        return listaBeers;
+    }
+
+    public void setListaBeers(MyList<Beer> listaBeers) {
+        this.listaBeers = listaBeers;
     }
 }
