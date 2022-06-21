@@ -1,5 +1,9 @@
 package Entidades;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -7,7 +11,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner in = new Scanner(System.in);
         Main sistema = new Main();
         int opcion = 0;
@@ -21,7 +25,8 @@ public class Main {
                 in.nextLine();
                 switch (opcion) {
                     case 1:
-                        //cargarDatos(sistema);
+                        Control b = new Control();
+                        b.cargaDatos();
                         break;
                     case 2:
                         Scanner in2 = new Scanner(System.in);

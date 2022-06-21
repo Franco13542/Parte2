@@ -1,5 +1,8 @@
 package Entidades;
 
+import uy.um.edu.prog2.adt.ListaEnlazada.MyList;
+import uy.um.edu.prog2.adt.ListaEnlazada.MyListImpl;
+
 public class Brewery {
     private long id;
     private String name;

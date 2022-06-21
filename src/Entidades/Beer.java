@@ -1,5 +1,8 @@
 package Entidades;
 
+import uy.um.edu.prog2.adt.ListaEnlazada.MyList;
+import uy.um.edu.prog2.adt.ListaEnlazada.MyListImpl;
+
 public class Beer {
     private long id;
     private String name;
@@ -48,11 +51,11 @@ public class Beer {
     }
 
     public MyList<Review> getListaReviews() {
-        return listaReviews;
+        return listaReviewsCerveza;
     }
 
     public void setListaReviews(MyList<Review> listaReviews) {
-        this.listaReviews = listaReviews;
+        this.listaReviewsCerveza = listaReviews;
     }
 }
 
